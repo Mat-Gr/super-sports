@@ -12,9 +12,10 @@ const uglify = require('gulp-uglify');
 
 // Sass
 gulp.task('sass', function() {
-    return gulp.src('source/scss/**/*.scss')
+    return gulp.src('source/scss/main.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+            .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('public/assets/stylesheets'))
         .pipe(browserSync.stream());
 });
