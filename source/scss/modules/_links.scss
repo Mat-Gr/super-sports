@@ -1,0 +1,17 @@
+// Mixin
+@mixin links($link, $visit, $hover, $active, $decor: none, $hover-decor: underline) {
+    a {
+        text-decoration: $decor;
+        color: $link;
+        &:visited {
+            color: $visit;
+        }
+        &:hover {
+            color: $hover;
+            text-decoration: $hover-decor;
+        }
+        &:active {
+            color: $active;
+        }
+    }
+}
