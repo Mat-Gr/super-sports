@@ -1,0 +1,25 @@
+.header {
+    @include links($grey, $light-grey, $light-red, $red);
+    a {
+        @include font($family: $Arial);
+    }
+
+    @include button($grey, $white, $light-grey, $red);
+}
+
+.splitter {
+    background-color: $light-grey;
+    height: 1px
+}
+
+
+.line {
+    background-color: $red;
+    @at-root #{&}--big {
+        height: 7px;
+        margin-bottom: 2px;
+    }
+    @at-root #{&}--small {
+        height: 2px;
+    }
+}
