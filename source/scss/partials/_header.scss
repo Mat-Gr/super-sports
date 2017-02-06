@@ -44,6 +44,19 @@
             @include font(16px, $family: $Arial);
         }
     }
+
+    .searchbar {
+        @include font(14px, $grey, $Arial);
+        input[name="search"] {
+            @include font(14px, $grey, $Arial);
+            overflow: hidden;
+            border: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
 }
 
 
