@@ -1,5 +1,5 @@
 // Header styles
-.header {
+header {
     // Default link styles
     @include links($grey, $light-grey, $light-red, $red);
     a {
@@ -63,6 +63,7 @@
 // Red dobble-line at the bottom
 .line {
     background-color: $red;
+    z-index: 11;
     @at-root #{&}--big {
         height: 7px;
         margin-bottom: 2px;

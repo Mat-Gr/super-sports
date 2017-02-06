@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <div class="header container">
+        <header class="container">
             <div class="row justify-content-between py-4">
                 <div class="col-lg-3 d-flex align-items-center">
                     <a href="#"><img class="img-fluid" src="assets/imgs/logo.png" alt="Super Sports Logo"></a>
@@ -130,12 +130,39 @@
                     <input type="text" name="search" placeholder="Search...">
                 </div>
             </div>
-        </div>
+        </header>
         <div class="container-fluid">
             <div class="row line line--big"></div>
             <div class="row line line--small"></div>
         </div>
 
+        <main id="homepage" class="container-fluid">
+            <div id="slider" class="row">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="assets/imgs/slider/1.jpg" alt="First slide">
+                            <div class="carousel-caption">
+                                <h1>RIGHT IS PINK.</br>LEFT IS BLUE</h1>
+                                <p>Inspired by Brasil’s bold colors and matching up to football’s on-pitch</br>playmakers, these kicks are ready to stand out.</p>
+                                <button class="px-4 py-2" type="button" name="call-to-action">SHOP BRASIL</button>
+                            </div>
+                        </div>
+                        <!-- <div class="carousel-item">
+                            <img class="d-block img-fluid" src="assets/imgs/slider/2.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="assets/imgs/slider/3.jpg" alt="Third slide">
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </main>
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <!-- Bootstrap javascript -->

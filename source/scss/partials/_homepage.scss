@@ -1,0 +1,30 @@
+main {
+    #slider {
+        max-height: 656px;
+
+        .carousel-inner {
+            height: 100%;
+
+            .carousel-caption {
+                bottom: 50%;
+                left: initial;
+                right: initial;
+                padding: 40px 100px;
+                background-color: transparentize($black, 0.4);
+                text-align: left;
+
+                @include button();
+            }
+
+            h1 {
+                @include font(59.3px, $white, $PTSans);
+                margin-bottom: 20px;
+            }
+
+            p {
+                @include font(14px, $white, $PTSans);
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
