@@ -59,16 +59,15 @@ header {
     }
 }
 
-
 // Red dobble-line at the bottom
 .line {
-    background-color: $red;
-    z-index: 11;
-    @at-root #{&}--big {
-        height: 7px;
-        margin-bottom: 2px;
-    }
-    @at-root #{&}--small {
-        height: 2px;
-    }
+    height: 2px;
+    position: absolute;
+    box-sizing: content-box;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    border-top: solid 7px $red;
+    border-bottom: solid 2px $red;
 }
