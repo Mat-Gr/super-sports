@@ -1,0 +1,29 @@
+footer {
+    width: 100%;
+
+    h3 {
+        @include font(22.65px, $white, $PTSans);
+    }
+
+    .newsletter {
+        background-color: $red;
+
+
+        @include button($white, $red, $light-red, $white);
+
+        input[name="email"] {
+            flex: 1;
+            @include font(14px, $grey, $Arial);
+            overflow: hidden;
+            border: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .footer {
+        background-color: $dark-grey;
+    }
+}
