@@ -5,6 +5,15 @@ footer {
         @include font(22.65px, $white, $PTSans);
     }
 
+    p {
+        @include font(14px, $grey, $Arial);
+    }
+
+    @include links($white, $white, $red, $light-red);
+    a {
+        font-size: 14px;
+    }
+
     .newsletter {
         background-color: $red;
 
@@ -25,5 +34,18 @@ footer {
 
     .footer {
         background-color: $dark-grey;
+        line-height: 1.5;
+
+        .stores {
+            flex: 1;
+
+            i {
+                font-size: 20px;
+            }
+        }
+
+        .support {
+            @include links($grey, $grey, $red, $red);
+        }
     }
 }
