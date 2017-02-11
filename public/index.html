@@ -14,13 +14,13 @@
     <body>
         <header class="container">
             <div class="row justify-content-between py-4">
-                <div class="col-lg-3 d-flex align-items-center">
+                <div class="col-lg-3 col-md-12 d-flex justify-content-center align-items-center">
                     <a href="#"><img class="img-fluid" src="assets/imgs/logo.png" alt="Super Sports Logo"></a>
                 </div>
-                <div class="col-lg-6 d-flex justify-content-between align-items-center">
-                    <a href="tel:+4522660077"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;+45&nbsp;22&nbsp;66&nbsp;00&nbsp;77</a>
-                    <a href="mailto:contact@supersports.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;LOREM@IPSUM.com</a>
-                    <button class="px-4 py-2" type="button" name="checkout"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;$&nbsp;99.54&nbsp;&nbsp;&nbsp;CHECKOUT</button>
+                <div class="col-lg-6 col-md-12 d-flex justify-content-center justify-content-lg-between align-items-center">
+                    <a class="hidden-md-down" href="tel:+4522660077"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;+45&nbsp;22&nbsp;66&nbsp;00&nbsp;77</a>
+                    <a class="hidden-md-down" href="mailto:contact@supersports.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;LOREM@IPSUM.com</a>
+                    <button class="hidden-md-down px-4 py-2" type="button" name="checkout"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;$&nbsp;99.54&nbsp;&nbsp;&nbsp;CHECKOUT</button>
                 </div>
             </div>
             <div class="row">
@@ -28,97 +28,81 @@
                     <div class="splitter"></div>
                 </div>
             </div>
-            <div class="row justify-content-between py-2">
-                <div class="col-lg-8 d-flex justify-content-between align-items-center">
+            <nav class="row navbar navbar-toggleable-md navbar-light py-3">
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <h2 id="menu-text" class="navbar-brand hidden-lg-up">MENU</h2>
 
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">HOME</a>
-                        <div class="dropdown-menu">
-                            <a href="" class="dropdown-item">ITEM 1</a>
-                            <a href="" class="dropdown-item">ITEM 2</a>
-                            <a href="" class="dropdown-item">ITEM 3</a>
-                            <a href="" class="dropdown-item">ITEM 4</a>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="col-lg-8 d-flex justify-content-lg-between align-items-lg-center navbar-nav">
+                    <li class="nav-item active">
+                        <div class="dropdown">
+                            <a href="#">HOME</a>
                         </div>
-                    </div>
-
-
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">MEN</a>
-                        <div class="dropdown-menu">
-                            <a href="" class="dropdown-item">ITEM 1</a>
-                            <a href="" class="dropdown-item">ITEM 2</a>
-                            <a href="" class="dropdown-item">ITEM 3</a>
-                            <a href="" class="dropdown-item">ITEM 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">MEN</a>
+                            <div class="dropdown-menu">
+                                <a href="" class="dropdown-item">ITEM 1</a>
+                                <a href="" class="dropdown-item">ITEM 2</a>
+                                <a href="" class="dropdown-item">ITEM 3</a>
+                                <a href="" class="dropdown-item">ITEM 4</a>
+                            </div>
                         </div>
-                    </div>
-
-
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">WOMEN</a>
-                        <div class="dropdown-menu">
-                            <a href="" class="dropdown-item">ITEM 1</a>
-                            <a href="" class="dropdown-item">ITEM 2</a>
-                            <a href="" class="dropdown-item">ITEM 3</a>
-                            <a href="" class="dropdown-item">ITEM 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">WOMEN</a>
+                            <div class="dropdown-menu">
+                                <a href="" class="dropdown-item">ITEM 1</a>
+                                <a href="" class="dropdown-item">ITEM 2</a>
+                                <a href="" class="dropdown-item">ITEM 3</a>
+                                <a href="" class="dropdown-item">ITEM 4</a>
+                            </div>
                         </div>
-                    </div>
-
-
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">KIDS</a>
-                        <div class="dropdown-menu">
-                            <a href="" class="dropdown-item">ITEM 1</a>
-                            <a href="" class="dropdown-item">ITEM 2</a>
-                            <a href="" class="dropdown-item">ITEM 3</a>
-                            <a href="" class="dropdown-item">ITEM 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">KIDS</a>
+                            <div class="dropdown-menu">
+                                <a href="" class="dropdown-item">ITEM 1</a>
+                                <a href="" class="dropdown-item">ITEM 2</a>
+                                <a href="" class="dropdown-item">ITEM 3</a>
+                                <a href="" class="dropdown-item">ITEM 4</a>
+                            </div>
                         </div>
-                    </div>
-
-
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">SALE</a>
-                        <div class="dropdown-menu">
-                            <a href="" class="dropdown-item">ITEM 1</a>
-                            <a href="" class="dropdown-item">ITEM 2</a>
-                            <a href="" class="dropdown-item">ITEM 3</a>
-                            <a href="" class="dropdown-item">ITEM 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a href="#">SALE</a>
                         </div>
-                    </div>
-
-
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">ABOUT US</a>
-                        <div class="dropdown-menu">
-                            <a href="" class="dropdown-item">ITEM 1</a>
-                            <a href="" class="dropdown-item">ITEM 2</a>
-                            <a href="" class="dropdown-item">ITEM 3</a>
-                            <a href="" class="dropdown-item">ITEM 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a href="#">ABOUT US</a>
                         </div>
-                    </div>
-
-
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">SUPPORT</a>
-                        <div class="dropdown-menu">
-                            <a href="" class="dropdown-item">ITEM 1</a>
-                            <a href="" class="dropdown-item">ITEM 2</a>
-                            <a href="" class="dropdown-item">ITEM 3</a>
-                            <a href="" class="dropdown-item">ITEM 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a href="#">SUPPORT</a>
                         </div>
-                    </div>
+                    </li>
+                </ul>
+                <form class="searchbar col-lg-2 offset-lg-2 hidden-md-down d-flex justify-content-lg-between align-items-lg-center">
+                  <i class="fa fa-search" aria-hidden="true"></i>&nbsp;
+                  <input type="text" name="search" placeholder="Search...">
+                </form>
+              </div>
+            </nav>
 
-                </div>
-                <div class="searchbar col-lg-2 d-flex justify-content-between align-items-center">
-                    <i class="fa fa-search" aria-hidden="true"></i>&nbsp;
-                    <input type="text" name="search" placeholder="Search...">
-                </div>
-            </div>
         </header>
         <div class="container-fluid">
             <div class="line--red"></div>
         </div>
 
-        <div class="container-fluid">
+        <div class="container-fluid hidden-md-down">
             <div class="row">
                 <div id="slider" class="col-lg-12">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -415,13 +399,18 @@
             <div class="newsletter">
                 <div class="container py-4">
                     <div class="row my-3 justify-content-between align-items-center">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 hidden-md-down">
                             <h3>SIGN UP FOR EXCLUSIVE SALES AND PRODUCT NEWS</h3>
                         </div>
-                        <div class="col-lg-4">
-                            <form id="signup" class="d-flex justify-content-between">
+                        <div class="col-lg-4 hidden-md-down">
+                            <form class="d-flex justify-content-between">
                                 <input class="px-3" type="text" name="email" placeholder="LOREM@IPUSM.COM">
                                 <button class="ml-3 px-4 py-3" type="submit" form="signup" name="submit">SIGN UP</button>
+                            </form>
+                        </div>
+                        <div class="col-12  hidden-lg-up">
+                            <form>
+                                <input class="input--mobile p-3" type="text" name="email" placeholder="SIGN UP FOR OUR NEWSLETTER">
                             </form>
                         </div>
                     </div>
@@ -430,7 +419,7 @@
             <div class="footer">
                 <div class="container">
                     <div class="row pt-3 pb-4">
-                        <div class="col-lg-3 d-flex flex-column">
+                        <div class="col-lg-3 d-flex flex-column hidden-md-down">
                             <h3 class="mb-3">OUR STORES</h3>
                             <div class="stores d-flex flex-column justify-content-between">
                                 <p>Feel free to visit our stores or contact us.</p>
@@ -445,7 +434,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 offset-lg-1 d-flex flex-column">
+                        <div class="col-lg-3 offset-lg-1 d-flex flex-column hidden-md-down">
                             <h3 class="mb-3">BLOG POSTS</h3>
                             <a href="#">New sexy sport clothes are here!</a>
                             <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -454,7 +443,7 @@
                             <a href="#">Lorem ipsum dolor sit amet.</a>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
-                        <div class="col-lg-4 offset-lg-1">
+                        <div class="col-lg-4 offset-lg-1 hidden-md-down">
                             <h3 class="mb-3">SUPPORT</h3>
                             <div class="support row">
                                 <div class="col-lg-6 d-flex flex-column">
@@ -480,6 +469,16 @@
                                     <a href="#">Sign up & Save</a>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-12 d-flex flex-column align-items-center hidden-lg-up">
+                            <div class="d-flex justify-content-around mb-3">
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook mr-3 fa-2x" aria-hidden="true"></i></a>
+                                <a href="https://www.twitter.com"><i class="fa fa-twitter mr-3 fa-2x" aria-hidden="true"></i></a>
+                                <a href="https://www.plus.google.com"><i class="fa fa-google-plus mr-3 fa-2x" aria-hidden="true"></i></a>
+                                <a href="https://www.vimeo.com"><i class="fa fa-vimeo mr-3 fa-2x" aria-hidden="true"></i></a>
+                                <a href="https://www.vimeo.com"><i class="fa fa-rss fa-2x" aria-hidden="true"></i></a>
+                            </div>
+                            <p>Copyright Super Sports 2017</p>
                         </div>
                     </div>
                 </div>

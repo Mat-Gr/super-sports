@@ -15,12 +15,30 @@ header {
         height: 1px
     }
 
+    // Menu
+    nav {
+        #menu-text {
+            color: $grey;
+            padding-top: 9px;
+        }
+    }
+
     // Dropdown menu main links
     .dropdown {
         @include links($grey, $grey, $red, $light-red, none, none);
         a {
             @include font(18px, $family: $PTSans);
+            // Media querie for mobile
+            @media screen and (max-width: 720px){
+                @include font(20px);
+                line-height: 1.7;
+            }
         }
+    }
+
+    // Active link color
+    li.active {
+        @include links($red, $red, $red, $light-red, none, none);
     }
 
     // Dropdown menu box
