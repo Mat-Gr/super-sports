@@ -19,3 +19,26 @@
         display: block;
     }
 }
+
+
+// Hack to make a sticky footer + fixes of side-effects
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+@media screen and (max-width: 720px){
+    header {
+        margin: 0!important;
+    }
+}
+
+.line--container {
+    width: 100%;
+}
+
+main {
+    flex: 1;
+}
