@@ -1,0 +1,20 @@
+.contact-form {
+    h1 {
+        @include font(28px, $grey, $PTSans);
+        font-weight: 600;
+    }
+
+    @include font(14px, $grey, $Arial);
+    @include button();
+
+    input[type="text"], input[type="email"], textarea {
+        @include font(14px, $grey, $Arial);
+        width: 100%;
+        resize: none;
+        border: solid 1px $grey;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
