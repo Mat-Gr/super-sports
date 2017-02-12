@@ -1,0 +1,118 @@
+.gallery {
+    img {
+        width: 100%;
+        object-fit: cover;
+        border: solid 1px $light-grey;
+
+        &.img--large {
+            height: 570px;
+
+            @media screen and (max-width: 720px){
+                height: 280px;
+            }
+        }
+
+        &.img--small {
+            height: 170px;
+            cursor: pointer;
+
+            @media screen and (max-width: 720px){
+                height: 80px;
+            }
+        }
+
+        &.img--current {
+            border-color: $red;
+        }
+    }
+}
+
+.detail {
+    @include font(20px, $grey, $Arial);
+
+    h1 {
+        @include font(28px);
+    }
+
+    h2 {
+        @include font(40px, $black, $Arial);
+    }
+
+    h1, h2, label, button {
+        font-weight: 600;
+    }
+
+    .line-through {
+        @include font(24px);
+        text-decoration: line-through;
+    }
+
+    .italic {
+        font-style: italic;
+    }
+
+    input, select {
+        @include font(20px);
+    }
+
+    select {
+        flex: 1;
+        background: none;
+    }
+
+    input[type="number"] {
+        width: 100px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    @include button();
+    button {
+        font-size: 28px;
+    }
+}
+
+.tabs-container {
+    border-bottom: 1px solid $light-grey;
+
+    ul.nav.nav-tabs {
+        border-bottom: none;
+    }
+
+    a {
+        @include font(24px, $grey);
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+        border-color: $light-grey $light-grey $white !important;
+        position: relative;
+
+        &:not(.active) {
+            background-color: $lightest-grey;
+            border-bottom: none;
+        }
+
+        &.active:before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-top: 9px solid $red;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        @media screen and (max-width: 720px){
+            @include font(18px, $grey);
+        }
+    }
+
+    .nav-link.active {
+        color: $grey;
+    }
+}
+
+.tab-content {
+    @include font(16px);
+    line-height: 1.3;
+}
