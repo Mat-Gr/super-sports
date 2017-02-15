@@ -1,0 +1,99 @@
+<main class="detail pt-4 pb-4">
+    <div class="container mb-lg-3 mb-5">
+        <div class="row">
+            <div class="gallery col-lg-6">
+                <img class="img--large img-fluid mb-3" src="{{product.heroimg}}" alt="shoe">
+                <div class="row">
+                    <div class="col"><img class="img--small img-fluid" src="{{product.heroimg}}" alt="shoe"></div>
+                    <div class="col"><img class="img--small img--current img-fluid" src="{{product.img2}}" alt="shoe"></div>
+                    <div class="col"><img class="img--small img-fluid" src="{{product.img3}}" alt="shoe"></div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex flex-column pt-4">
+                <h1>{{product.name}}</h1>
+                <div class="d-flex justify-content-between align-items-center pt-3 mb-3">
+                    <img class="img-fluid" src="assets/imgs/brand-logo.png" alt="asics-logo">
+                    <h2>{{product.price | currency:'USD':true:'2.2-2'}}</h2>
+                </div>
+                <span class="line-through align-self-end">kr 1115.24</span>
+                <span class="italic align-self-end mt-2 mb-5">You save 15.00%</span>
+                <form id="buy">
+                    <div class="d-flex justify-content-between mb-2">
+                        <label for="size">Size</label><label for="amount">Amount</label>
+                    </div>
+                    <div class="d-flex justify-content-between mb-4">
+                        <select id="size" class="py-2 mr-5" name="size">
+                            <option value="eu-45-black">EU 45 Black</option>
+                            <option value="eu-45-black">EU 46 Black</option>
+                            <option value="eu-45-black">EU 47 Black</option>
+                        </select>
+                        <input id="amount" class="py-2 ml-3" type="number" name="amount" value="1">
+                    </div>
+                </form>
+                <button class="align-self-end py-2 px-5" type="submit" form="buy" name="buy-now">BUY NOW</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabs-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item mr-2">
+                            <a class="nav-link active py-lg-3 px-lg-5" data-toggle="tab" href="#description" role="tab">Description</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link py-lg-3 px-lg-5" data-toggle="tab" href="#shipping" role="tab">Shipping</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-lg-3 px-lg-5" data-toggle="tab" href="#sizing" role="tab">Sizing</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pt-5">
+        <!-- Tab panes -->
+        <div class="row tab-content">
+            <div class="col-lg-12 tab-pane active" id="description" role="tabpanel">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit, elit vitae porttitor facilisis, urna nunc sollicitudin nibh, eu sodales metus nisi a orci. Cras posuere, mauris sit amet congue commodo, ex mauris auctor massa, at tincidunt massa quam eget mauris. Suspendisse quis dignissim lacus.</p>
+                        <p class="mb-4">Duis vitae ante non diam porttitor porttitor nec non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer ac risus cursus lectus fermentum consectetur. In hac habitasse platea dictumst. Fusce tristique rutrum elit id luctus. Fusce malesuada justo quis mauris scelerisque finibus. Cras porta, tortor non interdum fringilla, lorem erat aliquam justo, ut pulvinar arcu diam in odio. Etiam at nulla commodo, bibendum dolor sed, molestie justo. Integer nulla metus, efficitur eu malesuada placerat, porttitor et sapien.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit, elit vitae porttitor facilisis, urna nunc sollicitudin nibh, eu sodales metus nisi a orci. Cras posuere, mauris sit amet congue commodo, ex mauris auctor massa, at tincidunt massa quam eget mauris. Suspendisse quis dignissim lacus.</p>
+                        <p class="mb-4">Duis vitae ante non diam porttitor porttitor nec non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer ac risus cursus lectus fermentum consectetur. In hac habitasse platea dictumst. Fusce tristique rutrum elit id luctus. Fusce malesuada justo quis mauris scelerisque finibus. Cras porta, tortor non interdum fringilla, lorem erat aliquam justo, ut pulvinar arcu diam in odio. Etiam at nulla commodo, bibendum dolor sed, molestie justo. Integer nulla metus, efficitur eu malesuada placerat, porttitor et sapien.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 tab-pane" id="shipping" role="tabpanel">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="mb-4">Duis vitae ante non diam porttitor porttitor nec non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer ac risus cursus lectus fermentum consectetur. In hac habitasse platea dictumst. Fusce tristique rutrum elit id luctus. Fusce malesuada justo quis mauris scelerisque finibus. Cras porta, tortor non interdum fringilla, lorem erat aliquam justo, ut pulvinar arcu diam in odio. Etiam at nulla commodo, bibendum dolor sed, molestie justo. Integer nulla metus, efficitur eu malesuada placerat, porttitor et sapien.</p>
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit, elit vitae porttitor facilisis, urna nunc sollicitudin nibh, eu sodales metus nisi a orci. Cras posuere, mauris sit amet congue commodo, ex mauris auctor massa, at tincidunt massa quam eget mauris. Suspendisse quis dignissim lacus.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit, elit vitae porttitor facilisis, urna nunc sollicitudin nibh, eu sodales metus nisi a orci. Cras posuere, mauris sit amet congue commodo, ex mauris auctor massa, at tincidunt massa quam eget mauris. Suspendisse quis dignissim lacus.</p>
+                        <p class="mb-4">Duis vitae ante non diam porttitor porttitor nec non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer ac risus cursus lectus fermentum consectetur. In hac habitasse platea dictumst. Fusce tristique rutrum elit id luctus. Etiam at nulla commodo, bibendum dolor sed, molestie justo. Integer nulla metus, efficitur eu malesuada placerat, porttitor et sapien.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 tab-pane" id="sizing" role="tabpanel">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit, elit vitae porttitor facilisis, urna nunc sollicitudin nibh, eu sodales metus nisi a orci. Cras posuere, mauris sit amet congue commodo, ex mauris auctor massa, at tincidunt massa quam eget mauris. Suspendisse quis dignissim lacus.</p>
+                        <p class="mb-4">Duis vitae ante non diam porttitor porttitor nec non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce malesuada justo quis mauris scelerisque finibus. Cras porta, tortor non interdum fringilla, lorem erat aliquam justo, ut pulvinar arcu diam in odio. Etiam at nulla commodo, bibendum dolor sed, molestie justo. Integer nulla metus, efficitur eu malesuada placerat, porttitor et sapien.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="mb-4">Duis vitae ante non diam porttitor porttitor nec non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce malesuada justo quis mauris scelerisque finibus. Cras porta, tortor non interdum fringilla, lorem erat aliquam justo, ut pulvinar arcu diam in odio. Etiam at nulla commodo, bibendum dolor sed, molestie justo. Integer nulla metus, efficitur eu malesuada placerat, porttitor et sapien.</p>
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit, elit vitae porttitor facilisis, urna nunc sollicitudin nibh, eu sodales metus nisi a orci. Cras posuere, mauris sit amet congue commodo, ex mauris auctor massa, at tincidunt massa quam eget mauris. Suspendisse quis dignissim lacus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

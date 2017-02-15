@@ -22,7 +22,7 @@
 
 
 // Hack to make a sticky footer + fixes of side-effects
-body {
+my-app {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -39,6 +39,6 @@ body {
     width: 100%;
 }
 
-main {
+router-outlet + * {
     flex: 1;
 }

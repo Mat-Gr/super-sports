@@ -16,7 +16,10 @@ var app_component_1 = require('./app.component');
 var site_header_component_1 = require('./shared/site-header/site-header.component');
 var site_footer_component_1 = require('./shared/site-footer/site-footer.component');
 var home_component_1 = require('./home/home.component');
+var product_list_component_1 = require('./product/product-list.component');
+var product_details_component_1 = require('./product/product-details.component');
 var contact_component_1 = require('./contact/contact.component');
+var data_service_1 = require('./shared/product-data/data.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,11 +31,13 @@ var AppModule = (function () {
                 router_1.RouterModule.forRoot([
                     { path: 'home', component: home_component_1.HomeComponent },
                     { path: 'contact', component: contact_component_1.ContactComponent },
+                    { path: 'product/:id', component: product_details_component_1.ProductDetailsComponent },
                     { path: '', redirectTo: 'home', pathMatch: 'full' },
                     { path: '**', redirectTo: 'home', pathMatch: 'full' }
                 ])
             ],
-            declarations: [app_component_1.AppComponent, site_header_component_1.SiteHeaderComponent, site_footer_component_1.SiteFooterComponent, home_component_1.HomeComponent, contact_component_1.ContactComponent],
+            declarations: [app_component_1.AppComponent, site_header_component_1.SiteHeaderComponent, site_footer_component_1.SiteFooterComponent, home_component_1.HomeComponent, product_list_component_1.ProductListComponent, product_details_component_1.ProductDetailsComponent, contact_component_1.ContactComponent],
+            providers: [data_service_1.DataService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

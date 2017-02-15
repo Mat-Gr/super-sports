@@ -7,7 +7,11 @@ import { AppComponent }  from './app.component';
 import { SiteHeaderComponent }  from './shared/site-header/site-header.component';
 import { SiteFooterComponent }  from './shared/site-footer/site-footer.component';
 import { HomeComponent }  from './home/home.component';
+import { ProductListComponent }  from './product/product-list.component';
+import { ProductDetailsComponent }  from './product/product-details.component';
 import { ContactComponent }  from './contact/contact.component';
+
+import { DataService }  from './shared/product-data/data.service';
 
 @NgModule({
   imports:      [
@@ -16,11 +20,13 @@ import { ContactComponent }  from './contact/contact.component';
       RouterModule.forRoot([
           { path:'home', component:HomeComponent},
           { path:'contact', component:ContactComponent},
+          { path:'product/:id', component:ProductDetailsComponent},
           { path:'', redirectTo: 'home', pathMatch: 'full'},
           { path:'**', redirectTo: 'home', pathMatch: 'full'}
       ])
   ],
-  declarations: [ AppComponent, SiteHeaderComponent, SiteFooterComponent, HomeComponent, ContactComponent ],
+  declarations: [ AppComponent, SiteHeaderComponent, SiteFooterComponent, HomeComponent, ProductListComponent, ProductDetailsComponent, ContactComponent ],
+  providers: [ DataService ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
