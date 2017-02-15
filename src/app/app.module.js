@@ -10,16 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
 var site_header_component_1 = require('./shared/site-header/site-header.component');
 var site_footer_component_1 = require('./shared/site-footer/site-footer.component');
+var home_component_1 = require('./home/home.component');
+var contact_component_1 = require('./contact/contact.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent, site_header_component_1.SiteHeaderComponent, site_footer_component_1.SiteFooterComponent],
+            imports: [platform_browser_1.BrowserModule,
+                router_1.RouterModule.forRoot([
+                    { path: 'home', component: home_component_1.HomeComponent },
+                    { path: 'contact', component: contact_component_1.ContactComponent },
+                    { path: '', redirectTo: 'home', pathMatch: 'full' },
+                    { path: '**', redirectTo: 'home', pathMatch: 'full' }
+                ])
+            ],
+            declarations: [app_component_1.AppComponent, site_header_component_1.SiteHeaderComponent, site_footer_component_1.SiteFooterComponent, home_component_1.HomeComponent, contact_component_1.ContactComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

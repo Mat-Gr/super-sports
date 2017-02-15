@@ -1,7 +1,7 @@
 <header class="container">
     <div class="row justify-content-between py-4">
         <div class="col-lg-3 col-md-12 d-flex justify-content-center align-items-center">
-            <a href="index.html"><img class="img-fluid" src="./app/assets/imgs/logo.png" alt="Super Sports Logo"></a>
+            <a [routerLink]="['home']"><img class="img-fluid" src="./app/assets/imgs/logo.png" alt="Super Sports Logo"></a>
         </div>
         <div class="col-lg-6 col-md-12 d-flex justify-content-center justify-content-lg-between align-items-center">
             <a class="hidden-md-down" href="tel:+4522660077"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;+45&nbsp;22&nbsp;66&nbsp;00&nbsp;77</a>
@@ -22,9 +22,9 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="col-lg-8 d-flex justify-content-lg-between align-items-lg-center navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item" routerLinkActive="active">
                 <div class="dropdown">
-                    <a href="index.html">HOME</a>
+                    <a [routerLink]="['home']">HOME</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -70,9 +70,9 @@
                     <a href="#">ABOUT US</a>
                 </div>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item" routerLinkActive="active">
                 <div class="dropdown">
-                    <a href="contact.html">CONTACT</a>
+                    <a [routerLink]="['contact']">CONTACT</a>
                 </div>
             </li>
         </ul>
