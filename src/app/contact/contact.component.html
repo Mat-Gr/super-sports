@@ -1,1 +1,44 @@
-<h1>contact</h1>
+<main class="contact-form container pt-5 pb-4" [hidden]="hasBeenSubmitted" >
+    <div class="row">
+        <div class="col-lg-2 mb-5">
+            <h1>CONTACT US</h1>
+        </div>
+    </div>
+    <form (ngSubmit)="contact(contactForm, $event)" #contactForm="ngForm">
+        <div class="row d-flex align-items-center mb-4">
+            <div class="col-lg-1 my-2"><label for="contactname">NAME:</label></div>
+            <div class="col-lg-4"><input id="contactname" class="p-2" type="text" name="contactname" [(ngModel)]="model.contactname" required placeholder="YOUR NAME..."></div>
+        </div>
+        <div class="row d-flex align-items-center mb-4">
+            <div class="col-lg-1 my-2"><label for="contactemail">EMAIL:</label></div>
+            <div class="col-lg-4">
+                <input id="contactemail" #contactemail="ngModel" class="p-2" type="text" name="contactemail" [(ngModel)]="model.contactemail" required placeholder="YOUR E-MAIL..." pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+                <div [hidden]="contactemail.valid || contactemail.pristine" class="form-warning pt-1">Please enter a valid e-mail address</div>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-lg-1"><label for="message">MESSAGE:</label></div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-lg-5"><textarea id="message" class="p-2" name="message" rows="6" [(ngModel)]="model.message" required placeholder="YOUR TEXT..."></textarea></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2"><button class="py-2 px-3" type="submit" name="submit">SEND MESSAGE</button></div>
+        </div>
+    </form>
+</main>
+<main class="contact-form container pt-5 pb-4" [hidden]="!hasBeenSubmitted" >
+    <div class="row">
+        <div class="col-lg-6 mb-5">
+            <h1>Thank you for your message, {{model.contactname}}.</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 d-flex flex-column">
+            <h2 class="mb-3">Here is the information we have recieved:</h2>
+            <p class="mb-3">Your name: {{model.contactname}}</p>
+            <p class="mb-3">Your email adress: {{model.contactemail}}</p>
+            <p class="mb-3">Your message: {{model.message}}</p>
+        </div>
+    </div>
+</main>
