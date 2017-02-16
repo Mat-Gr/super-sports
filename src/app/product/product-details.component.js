@@ -16,10 +16,29 @@ var ProductDetailsComponent = (function () {
         this._route = _route;
         this._router = _router;
         this._DataService = _DataService;
+        this.option = [];
     }
     ProductDetailsComponent.prototype.ngOnInit = function () {
         this.productid = +this._route.snapshot.params['id'];
         this.product = this._DataService.getDataById(this.productid);
+        // define heroimg
+        this.heroimg = this.product.heroimg;
+        // If there is an old price -> calculate percent you save
+        if (this.product.oldprice) {
+            this.percentage = ((this.product.oldprice - this.product.price) / this.product.oldprice) * 100;
+        }
+        // Combine colors and sizes
+        for (var _i = 0, _a = this.product.options; _i < _a.length; _i++) {
+            var item = _a[_i];
+            for (var _b = 0, _c = item.sizes; _b < _c.length; _b++) {
+                var size = _c[_b];
+                this.option.push(item.color + " " + size);
+            }
+        }
+    };
+    // change gallery image on click
+    ProductDetailsComponent.prototype.gallery = function (image) {
+        this.heroimg = image.src;
     };
     ProductDetailsComponent = __decorate([
         core_1.Component({

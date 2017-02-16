@@ -2,30 +2,28 @@
     <div class="container mb-lg-3 mb-5">
         <div class="row">
             <div class="gallery col-lg-6">
-                <img class="img--large img-fluid mb-3" src="{{product.heroimg}}" alt="shoe">
+                <img class="img--large img-fluid mb-3" [src]="heroimg" alt="shoe">
                 <div class="row">
-                    <div class="col"><img class="img--small img-fluid" src="{{product.heroimg}}" alt="shoe"></div>
-                    <div class="col"><img class="img--small img--current img-fluid" src="{{product.img2}}" alt="shoe"></div>
-                    <div class="col"><img class="img--small img-fluid" src="{{product.img3}}" alt="shoe"></div>
+                    <div class="col"><img #img1 (click)="gallery(img1)" class="img--small img-fluid img--current" [src]="product.heroimg" alt="shoe"></div>
+                    <div class="col"><img #img2 (click)="gallery(img2)" class="img--small img-fluid" [src]="product.img2" alt="shoe"></div>
+                    <div class="col"><img #img3 (click)="gallery(img3)" class="img--small img-fluid" [src]="product.img3" alt="shoe"></div>
                 </div>
             </div>
             <div class="col-lg-6 d-flex flex-column pt-4">
                 <h1>{{product.name}}</h1>
                 <div class="d-flex justify-content-between align-items-center pt-3 mb-3">
-                    <img class="img-fluid" src="assets/imgs/brand-logo.png" alt="asics-logo">
+                    <img class="img-fluid" [src]="product.brandimg" alt="asics-logo">
                     <h2>{{product.price | currency:'USD':true:'2.2-2'}}</h2>
                 </div>
-                <span class="line-through align-self-end">kr 1115.24</span>
-                <span class="italic align-self-end mt-2 mb-5">You save 15.00%</span>
+                <span class="line-through align-self-end">{{product.oldprice | currency:'USD':true:'2.2-2'}}</span>
+                <span *ngIf="product.oldprice" class="italic align-self-end mt-2 mb-5">You save {{this.percentage | number:'1.0-2'}} %</span>
                 <form id="buy">
                     <div class="d-flex justify-content-between mb-2">
                         <label for="size">Size</label><label for="amount">Amount</label>
                     </div>
                     <div class="d-flex justify-content-between mb-4">
                         <select id="size" class="py-2 mr-5" name="size">
-                            <option value="eu-45-black">EU 45 Black</option>
-                            <option value="eu-45-black">EU 46 Black</option>
-                            <option value="eu-45-black">EU 47 Black</option>
+                            <option *ngFor="let item of option" [value]="item">EU {{item}}</option>
                         </select>
                         <input id="amount" class="py-2 ml-3" type="number" name="amount" value="1">
                     </div>
@@ -61,12 +59,9 @@
             <div class="col-lg-12 tab-pane active" id="description" role="tabpanel">
                 <div class="row">
                     <div class="col-lg-6">
-                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit, elit vitae porttitor facilisis, urna nunc sollicitudin nibh, eu sodales metus nisi a orci. Cras posuere, mauris sit amet congue commodo, ex mauris auctor massa, at tincidunt massa quam eget mauris. Suspendisse quis dignissim lacus.</p>
-                        <p class="mb-4">Duis vitae ante non diam porttitor porttitor nec non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer ac risus cursus lectus fermentum consectetur. In hac habitasse platea dictumst. Fusce tristique rutrum elit id luctus. Fusce malesuada justo quis mauris scelerisque finibus. Cras porta, tortor non interdum fringilla, lorem erat aliquam justo, ut pulvinar arcu diam in odio. Etiam at nulla commodo, bibendum dolor sed, molestie justo. Integer nulla metus, efficitur eu malesuada placerat, porttitor et sapien.</p>
+                        {{product.description}}
                     </div>
                     <div class="col-lg-6">
-                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit, elit vitae porttitor facilisis, urna nunc sollicitudin nibh, eu sodales metus nisi a orci. Cras posuere, mauris sit amet congue commodo, ex mauris auctor massa, at tincidunt massa quam eget mauris. Suspendisse quis dignissim lacus.</p>
-                        <p class="mb-4">Duis vitae ante non diam porttitor porttitor nec non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer ac risus cursus lectus fermentum consectetur. In hac habitasse platea dictumst. Fusce tristique rutrum elit id luctus. Fusce malesuada justo quis mauris scelerisque finibus. Cras porta, tortor non interdum fringilla, lorem erat aliquam justo, ut pulvinar arcu diam in odio. Etiam at nulla commodo, bibendum dolor sed, molestie justo. Integer nulla metus, efficitur eu malesuada placerat, porttitor et sapien.</p>
                     </div>
                 </div>
             </div>
