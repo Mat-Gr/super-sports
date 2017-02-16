@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
 var forms_1 = require('@angular/forms');
+var common_1 = require('@angular/common');
 var app_component_1 = require('./app.component');
 var site_header_component_1 = require('./shared/site-header/site-header.component');
 var site_footer_component_1 = require('./shared/site-footer/site-footer.component');
@@ -37,7 +38,7 @@ var AppModule = (function () {
                 ])
             ],
             declarations: [app_component_1.AppComponent, site_header_component_1.SiteHeaderComponent, site_footer_component_1.SiteFooterComponent, home_component_1.HomeComponent, product_list_component_1.ProductListComponent, product_details_component_1.ProductDetailsComponent, contact_component_1.ContactComponent],
-            providers: [data_service_1.DataService],
+            providers: [data_service_1.DataService, { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

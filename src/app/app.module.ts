@@ -2,6 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent }  from './app.component';
 import { SiteHeaderComponent }  from './shared/site-header/site-header.component';
@@ -26,7 +27,7 @@ import { DataService }  from './shared/product-data/data.service';
       ])
   ],
   declarations: [ AppComponent, SiteHeaderComponent, SiteFooterComponent, HomeComponent, ProductListComponent, ProductDetailsComponent, ContactComponent ],
-  providers: [ DataService ],
+  providers: [ DataService, {provide: LocationStrategy, useClass: HashLocationStrategy} ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
