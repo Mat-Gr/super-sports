@@ -17,6 +17,9 @@ var ProductDetailsComponent = (function () {
         this._router = _router;
         this._DataService = _DataService;
         this.option = [];
+        this.view1 = true;
+        this.view2 = false;
+        this.view3 = false;
     }
     ProductDetailsComponent.prototype.ngOnInit = function () {
         this.productid = +this._route.snapshot.params['id'];
@@ -37,8 +40,22 @@ var ProductDetailsComponent = (function () {
         }
     };
     // change gallery image on click
-    ProductDetailsComponent.prototype.gallery = function (image) {
+    ProductDetailsComponent.prototype.gallery = function (image, img) {
         this.heroimg = image.src;
+        this.view1 = false;
+        this.view2 = false;
+        this.view3 = false;
+        switch (img) {
+            case 1:
+                this.view1 = true;
+                break;
+            case 2:
+                this.view2 = true;
+                break;
+            case 3:
+                this.view3 = true;
+                break;
+        }
     };
     ProductDetailsComponent = __decorate([
         core_1.Component({

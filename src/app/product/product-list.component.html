@@ -8,7 +8,7 @@
                 <i class="fa fa-star-half-o" aria-hidden="true"></i>
                 <i class="fa fa-star-o" aria-hidden="true"></i>
             </div>
-            <a [routerLink]="['/product', product.id]"><img class="img-fluid" src="{{product.heroimg}}" alt="shoe"></a>
+            <a [routerLink]="['/product', product.id]"><img class="img-fluid" [src]="product.heroimg" alt="shoe"></a>
             <div class="product--description px-3 mt-3 pb-2">
                 <a [routerLink]="['/product', product.id]">{{product.name}}</a>
                 <h4 class="my-1">{{product.category | uppercase}}</h4>

@@ -4,9 +4,9 @@
             <div class="gallery col-lg-6">
                 <img class="img--large img-fluid mb-3" [src]="heroimg" alt="shoe">
                 <div class="row">
-                    <div class="col"><img #img1 (click)="gallery(img1)" class="img--small img-fluid img--current" [src]="product.heroimg" alt="shoe"></div>
-                    <div class="col"><img #img2 (click)="gallery(img2)" class="img--small img-fluid" [src]="product.img2" alt="shoe"></div>
-                    <div class="col"><img #img3 (click)="gallery(img3)" class="img--small img-fluid" [src]="product.img3" alt="shoe"></div>
+                    <div class="col"><img #img1 (click)="gallery(img1, 1)" [ngClass]="{'img--current': view1}" class="img--small img-fluid" [src]="product.heroimg" alt="shoe"></div>
+                    <div class="col"><img #img2 (click)="gallery(img2, 2)" [ngClass]="{'img--current': view2}" class="img--small img-fluid" [src]="product.img2" alt="shoe"></div>
+                    <div class="col"><img #img3 (click)="gallery(img3, 3)" [ngClass]="{'img--current': view3}" class="img--small img-fluid" [src]="product.img3" alt="shoe"></div>
                 </div>
             </div>
             <div class="col-lg-6 d-flex flex-column pt-4">

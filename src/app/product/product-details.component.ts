@@ -13,6 +13,9 @@ export class ProductDetailsComponent {
     percentage: number;
     option: Array<string> = [];
     heroimg: string;
+    view1: boolean = true;
+    view2: boolean = false;
+    view3: boolean = false;
 
     constructor(private _route: ActivatedRoute,
         private _router: Router,
@@ -40,7 +43,21 @@ export class ProductDetailsComponent {
     }
 
     // change gallery image on click
-    gallery(image: any) {
+    gallery(image: any, img: number) {
         this.heroimg = image.src;
+        this.view1 = false;
+        this.view2 = false;
+        this.view3 = false;
+        switch(img) {
+            case 1:
+                this.view1 = true;
+                break;
+            case 2:
+                this.view2 = true;
+                break;
+            case 3:
+                this.view3 = true;
+                break;
+        }
     }
 }
