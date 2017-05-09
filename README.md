@@ -21,9 +21,10 @@ Check out these pages:
   - Dynamically calculated discount percentage, based on old price (if such exists)
 
 ## Screenshots
-
+### Home page
 ![home page][home]
 
+### Product page
 ![product page][product]
 
 [home]: https://cloud.githubusercontent.com/assets/22744066/25854172/6c463062-34cf-11e7-880c-7d6f7d81270e.png "Home page"
